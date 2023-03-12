@@ -1,0 +1,35 @@
+
+
+.container-about {
+    margin: 25px 50px;
+}
+
+.container-about img{
+   border-radius: 15px;
+}
+.desktop{
+    display: block;
+}
+
+.valeurs {
+    margin: 0 60px;
+}
+
+@media screen and (max-width: 768px){
+    
+    .container-about {
+        margin: 5px 10px;
+    }
+
+    .mobile{
+        display: block;
+    }
+    
+    .about-block{
+        margin: 0 30px;
+    }
+
+    .valeurs {
+        margin: 0;
+    }
+}

@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 50px;
+  }
+  
+  .container img {
+    width: 120px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      margin: 20px 10px;
+    }
+    .container img {
+      width: 70px;
+    }
+  }
