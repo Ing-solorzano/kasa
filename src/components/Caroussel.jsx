@@ -11,22 +11,10 @@ function Caroussel() {
 
   const [current, setCurrent] = useState(0);
 
-  /*Avec la fonction ternaire (est-ce que xxx ? si oui yyyy: sinon zzz ),
-  quand on clique sur la flêche " > ",
-  si la photo affichée est la dernière de la fiche du logement ('pictures.length - 1 ?'),
-  alors on repart à la première (rappel c'est : [0])
-  sinon on affiche la suivante (current + 1).
-   */
   const nextSlide = () => {
     setCurrent(current === pictures.length - 1 ? 0 : current + 1);
   };
 
- /*Avec la fonction ternaire (est-ce que xxx ? si oui yyyy: sinon zzz ),
-  quand on clique sur la flêche " < ",
-  si la photo affichée est la dernière de la fiche du logement ('pictures.length - 1 ?'),
-  alors on repart à la première (rappel c'est : [0])
-  sinon on affiche la suivante (current + 1).
-   */
   const prevSlide = () => {
     setCurrent(current === 0 ? pictures.length - 1 : current - 1);
   };
