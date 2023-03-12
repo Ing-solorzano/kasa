@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import MyRoutes from "./Routes";
+
+/*la fonction 'App() appelle le fichier 'MyRoutes.jsx'
+grâce à la 'balise' REACT: '<MyRoutes />')
+qui fait réference à l'import du même nom ci-dessus.
+*/
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MyRoutes />
   );
 }
 
+/* Avec REACT, pour qu'une fonction puisse être 'importée'
+et donc utilisé dans un autre fichier, 
+il faut d'abord qu'elle soit 'exportée' ainsi:
+*/
 export default App;

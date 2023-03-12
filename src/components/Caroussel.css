@@ -1,0 +1,41 @@
+.caroussel {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    position: relative;
+  }
+   
+  .caroussel-image {
+    border-radius: 5px;
+    object-fit: cover;
+    height: 250px;
+  }
+  
+  .caroussel button {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    padding: 0 0;
+  }
+ 
+  .fleche-suiv {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    rotate: 90deg;
+  }
+  
+  .fleche-prec {
+    position: absolute;
+    top: 50%;
+    rotate: -90deg;
+  }
+  
+  .numero-page {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+  }
