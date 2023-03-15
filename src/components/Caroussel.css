@@ -8,7 +8,7 @@
   .caroussel-image {
     border-radius: 5px;
     object-fit: cover;
-    height: 250px;
+    height: 500px;
   }
   
   .caroussel button {
