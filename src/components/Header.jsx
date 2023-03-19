@@ -1,12 +1,13 @@
 import React from 'react'
 import Navbar from './Navbar'
+import logo from "../assets/logo.png";
 
 import './Header.css'
 
 function Header() {
   return (
-    <div className='container'>
-        <img className='logo' src="../../logo.png" alt="logo de l'agence immobilière Kasa"></img>
+    <div className='header-container'>
+        <img className='header-logo' src={logo} alt="logo de l'agence immobilière Kasa"></img>
         <Navbar/>
     </div>
   )

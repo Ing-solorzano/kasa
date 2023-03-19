@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import Vector from "../assets/Vector.svg";
 import "./Collapse.css";
 
 function Collapse(props) {
@@ -15,16 +14,11 @@ function Collapse(props) {
   }
 
   return (
-    <div>
-      <div className="collapse-block" onClick={inputCollapse}>
-        <p id="title">{props.title}</p>
-        <button>
-          <img
-            className="vector"
-            src={Vector}
-            style={{ rotate: `${rotate}` }}
-            alt="flêche"
-          />
+    <div className="collapse-block">
+      <div className="collapse-title" onClick={inputCollapse}>
+        <p>{props.title}</p>
+        <button className="fleche" style={{ rotate: `${rotate}` }}>
+          <i class="fa-solid fa-chevron-down"></i>
         </button>
       </div>
       <div

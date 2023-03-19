@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import cardItems from "../assets/logements";
-import Vector from "../assets/Vector.svg";
 import "./Caroussel.css";
 
 function Caroussel() {
@@ -21,14 +20,12 @@ function Caroussel() {
 
   return (
     <div className="caroussel">
-      {/* pour afficher les flêches : '<' &: '>', et les rendre clicables */}
-      <button className="fleche-prec">
-        <img src={Vector} onClick={prevSlide} alt="fleche" />
+      <button className="fleche-prec" onClick={prevSlide} >
+        <i class="fa-solid fa-chevron-left"></i>
       </button>
-      <button className="fleche-suiv">
-        <img src={Vector} onClick={nextSlide} alt="fleche" />
+      <button className="fleche-suiv" onClick={nextSlide} > 
+        <i class="fa-solid fa-chevron-right"></i>
       </button>
-      {/* Pour faire défilier les photos du logement */}
       {pictures.map((img, numPage) => {
         return (
           <div key={numPage}>
@@ -36,9 +33,7 @@ function Caroussel() {
               <img src={img} alt="Photos du logement" className="caroussel-image" />
             )}
             {numPage === current && (
-              <p className="numero-page">
-                {current + 1}/{pictures.length}
-              </p>
+              <p className="numero-page"> {current + 1}/{pictures.length} </p>
             )}
           </div>
         );

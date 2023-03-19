@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import cardItems from "../assets/logements.json";
 import "./Logement.css";
-import StarsColored from "../assets/starsColored";
 import Caroussel from "../components/Caroussel";
 import Collapse from "../components/Collapse";
 import Error from "./Error";
@@ -22,44 +21,44 @@ function Logement() {
   if (!item) {
     return <Error />;
   }
+ 
+    // On sépare le nom et le prénom, grâce à la fonction split(), car ils sont dans une seule valeur de la BDD,
+    //mais il faut les mettre sur 2 lignes dans la page
+  const [firstName, lastName] = item.host.name.split(' ');
 
-  const listeEquipements = item.equipments.map((e) => <li key={e}>{e}</li>);
   return (
     <>
       <Header />
       <main>
-      <Caroussel pictures={item.pictures} />
-  
+        <Caroussel pictures={item.pictures} />
         <div className="content">
           <div className="bloc-left">
             <div className="location">
-              <b>{item.title}</b>
+              <h2>{item.title}</h2>
               <p>{item.location}</p>
             </div>
             <div className="tags">
               <ul>
-                {item.tags.map((t) => (
-                  <li key={t}>{t}</li>
-                ))}
+                {item.tags.map((tag) => (<li key={tag}> {tag} </li>))}
               </ul>
             </div>
           </div>
-
           <div className="bloc-right">
-            <div className="NbRating" >
-              <StarsColored  rating={item.rating} />
+            <div className="rating" >
+              {[1,2,3,4,5].map((index)=> (<span className={item.rating >= index ? "coloredStar": "greyStar"}> ★ </span>))}
             </div>
-
-            <div className="host">
-              <p>{item.host.name}</p>
-              <img src={item.host.picture} alt="host" />
+            <div className="owner">
+              <div className="owner-name">
+                <p>{firstName}</p>
+                <p>{lastName}</p>
+              </div>
+              <img src={item.host.picture} alt="propriétaire" />
             </div>
           </div>
         </div>
-
         <div className="description">
           <Collapse texte={item.description} title="Description" />
-          <Collapse texte={listeEquipements} title="Equipements" />
+          <Collapse texte={item.equipments.map((e) => <li key={e}>{e}</li>)} title="Equipements" />
         </div>
       </main>
       <Footer />

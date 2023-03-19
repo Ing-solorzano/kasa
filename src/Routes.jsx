@@ -5,12 +5,12 @@ import About from "./pages/About";
 import Logement from "./pages/Logement";
 import Error from "./pages/Error";
 
-function MyRoutes() {
+function myRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/logement/:id" element={<Logement />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/logement/:id" element={<Logement />} />
         <Route path="/about" element={<About />} />
         <Route path="/*" element={<Error />} />
       </Routes>
@@ -18,4 +18,4 @@ function MyRoutes() {
   );
 }
 
-export default MyRoutes;
+export default myRoutes;

@@ -9,7 +9,7 @@ function Error() {
       <Header />
       <div className="blocError">
         <div className="error404">404</div>
-        <p>Oups! Cette page n'existe pas.</p>
+        <p>Oups! La page que vous demandez n'existe pas.</p>
         <Link to="/">Retour vers la page d'accueil</Link>
       </div>
     </div>

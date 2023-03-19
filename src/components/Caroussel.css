@@ -3,34 +3,34 @@
     flex-direction: column;
     align-content: center;
     position: relative;
+    margin-bottom: 10px;
   }
    
   .caroussel-image {
-    border-radius: 5px;
+    border-radius: 15px;
     object-fit: cover;
-    height: 500px;
+    width: 100%;
+    height: 300px;
   }
-  
-  .caroussel button {
-    height: 30px;
-    width: 30px;
+
+  .caroussel button{
+    background: transparent;
+    border: 0;
+    position: absolute;
+    padding-inline: 10px;
+    height: 100%;
     cursor: pointer;
-    padding: 0 0;
   }
- 
+  
+  .caroussel i {
+    color: white;
+    font-size: 40px;
+  }
+  
   .fleche-suiv {
-    position: absolute;
-    top: 50%;
     right: 0;
-    rotate: 90deg;
   }
-  
-  .fleche-prec {
-    position: absolute;
-    top: 50%;
-    rotate: -90deg;
-  }
-  
+    
   .numero-page {
     font-size: 15px;
     font-weight: bold;

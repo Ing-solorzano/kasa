@@ -1,18 +1,22 @@
-
-
 .container-about {
     margin: 25px 50px;
 }
 
-.container-about img{
-   border-radius: 15px;
-}
-.desktop{
-    display: block;
+.aboutImg {
+    background-image: url("../assets/imageAbout.jpg");
+    border-radius: 15px;
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    margin-bottom: 20px;
 }
 
 .valeurs {
     margin: 0 60px;
+}
+
+.valeurs .collapse-block {
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 768px){
@@ -21,12 +25,8 @@
         margin: 5px 10px;
     }
 
-    .mobile{
-        display: block;
-    }
-    
-    .about-block{
-        margin: 0 30px;
+    .aboutImg {
+        background-image: url("../assets/imageAboutMobile.jpg");
     }
 
     .valeurs {

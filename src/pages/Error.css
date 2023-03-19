@@ -9,36 +9,38 @@
   }
   
   .blocError p {
-    font-size: 36px;
-    padding: 0 20px;
+    font-size: 24px;
+    padding-inline: 20px;
   }
   
   .error404 {
-    font-size: 288px;
+    font-size: 150px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-top: 80px;
     color: #FF6060;
   }
   
   .bodyError p {
-    font-size: 36px;
+    font-size: 30px;
   }
   
   .blocError a {
-    padding: 70px;
+    padding-block: 70px;
     font-size: 18px;
-    text-decoration: underline;
+    text-decoration: none;
   }
   
   @media screen and (max-width: 768px) {
-    strong {
-      font-size: 96px;
+    .error404 {
+      font-size: 80px;
     }
+
     .blocError p {
-      font-size: 18px;
+      font-size: 12px;
       text-align: center;
     }
+
     .blocError a {
-      font-size: 14px;
+      font-size: 10px;
     }
   }

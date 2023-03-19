@@ -1,6 +1,7 @@
 import React from "react";
 import cardItems from "../assets/logements.json";
 import { Link } from "react-router-dom";
+import "./CardsPanel.css";
 
 function CardsPanel() { 
     return (

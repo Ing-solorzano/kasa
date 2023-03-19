@@ -1,29 +1,28 @@
-
-
-ul {
+nav ul {
     display: flex;
     list-style-type: none;
-    -webkit-padding-start: 0;
+    padding-left: 0;
     margin: 0;
   }
   
+nav li {
+  margin-left: 40px;
+  font-size: 0.8em;
+  font-size: 20px;
+}
+
+nav .link {
+  text-decoration: none;
+}
+
+nav .activated {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
   nav li {
-    margin-left: 40px;
-    font-size: 0.8em;
-    font-size: 20px;
+    margin-left: 5px;
+    font-size: 10px;
+    text-transform: uppercase;
   }
-  
-  .link {
-    text-decoration: none;
-  }
-  
-  .activated {
-    text-decoration: underline;
-  }
-  
-  @media screen and (max-width: 768px) {
-    nav li {
-      margin-left: 5px;
-      font-size: 10px;
-    }
-  }
+}
