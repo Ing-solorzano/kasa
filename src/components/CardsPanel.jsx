@@ -9,8 +9,8 @@ function CardsPanel() {
         {cardItems.map((item) => (
             <Link key={item.id} to={`/logement/${item.id}`}>
                 <div className="card">
-                <img src={item.cover} alt={item.title} />
-                <p>{item.title}</p>
+                    <img src={item.cover} alt={item.title} />
+                    <p>{item.title}</p>
                 </div>
             </Link>
         ))}
