@@ -30,18 +30,20 @@ function About() {
   ];
 
   return (
-    <div>
-      <Header />
-      <div className="container-about">
-        <div >
-          <div className="aboutImg"></div>
-        </div>
-        <div className="valeurs">
-          {Items.map((item) => {
-            return (
-              <Collapse title={item.title} texte={item.texte} key={item.id} />
-            );
-          })}
+    <div className="page-content">
+      <div className="main-top">
+        <Header />
+        <div className="container-about">
+          <div >
+            <div className="aboutImg"></div>
+          </div>
+          <div className="valeurs">
+            {Items.map((item) => {
+              return (
+                <Collapse title={item.title} texte={item.texte} key={item.id} />
+              );
+            })}
+          </div>
         </div>
       </div>
       <Footer />

@@ -4,10 +4,22 @@
   color: #FF6060;
 }
 
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
   
 @media screen and (max-width: 768px) {
   body {
-    margin: 0 20px;
+    margin-inline: 20px;
   }
 }
 

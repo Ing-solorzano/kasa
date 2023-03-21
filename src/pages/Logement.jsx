@@ -27,42 +27,44 @@ function Logement() {
   const [firstName, lastName] = item.host.name.split(' ');
 
   return (
-    <>
-      <Header />
-      <main>
-        <Caroussel pictures={item.pictures} />
-        <div className="content">
-          <div className="bloc-left">
-            <div className="location">
-              <h2>{item.title}</h2>
-              <p>{item.location}</p>
-            </div>
-            <div className="tags">
-              <ul>
-                {item.tags.map((tag) => (<li key={tag}> {tag} </li>))}
-              </ul>
-            </div>
-          </div>
-          <div className="bloc-right">
-            <div className="rating" >
-              {[1,2,3,4,5].map((index)=> (<span className={item.rating >= index ? "coloredStar": "greyStar"}> ★ </span>))}
-            </div>
-            <div className="owner">
-              <div className="owner-name">
-                <p>{firstName}</p>
-                <p>{lastName}</p>
+    <div className="page-content">
+      <div className="main-top">
+        <Header />
+        <main>
+          <Caroussel pictures={item.pictures} />
+          <div className="content">
+            <div className="bloc-left">
+              <div className="location">
+                <h2>{item.title}</h2>
+                <p>{item.location}</p>
               </div>
-              <img src={item.host.picture} alt="propriétaire" />
+              <div className="tags">
+                <ul>
+                  {item.tags.map((tag) => (<li key={tag}> {tag} </li>))}
+                </ul>
+              </div>
+            </div>
+            <div className="bloc-right">
+              <div className="rating" >
+                {[1,2,3,4,5].map((index)=> (<span className={item.rating >= index ? "coloredStar": "greyStar"}> ★ </span>))}
+              </div>
+              <div className="owner">
+                <div className="owner-name">
+                  <p>{firstName}</p>
+                  <p>{lastName}</p>
+                </div>
+                <img src={item.host.picture} alt="propriétaire" />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="description">
-          <Collapse texte={item.description} title="Description" />
-          <Collapse texte={item.equipments.map((e) => <li key={e}>{e}</li>)} title="Equipements" />
-        </div>
-      </main>
+          <div className="description">
+            <Collapse texte={item.description} title="Description" />
+            <Collapse texte={item.equipments.map((e) => <li key={e}>{e}</li>)} title="Equipements" />
+          </div>
+        </main>
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
